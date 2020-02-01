@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TODO List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1 class="head">TODO List</h1>
+    <div class="container">
+        <div class="add-task">
+            <input class="add-task__input" placeholder="Zadanie" autofocus>
+        </div>
+        <div class="filters">
+            <div data-filter="all" class="filters__item filters__item_selected">Wszystko</div>
+            <div data-filter="done" class="filters__item">Zawieszone</div>
+            <div data-filter="todo" class="filters__item">Nie zawieszone</div>
+        </div>
+        <ul class="list">
+
+        </ul>
+        <div class="statistic">
+            Wszystkie:
+            <div class="statistic__total">3</div>
+            Zawieszone:
+            <div class="statistic__done">1</div>
+            Pozostało:
+            <div class="statistic__left">2</div>
+        </div>
+    </div>
+    <template id="todoTemplate" style="display: none">
+    <li class="list__item task">
+        <div class="task__status"></div>
+        <span class="task__name">{{TODO}}</span>
+        <div class="task__delete-button">❌</div>
+    </li>
+</template>
+    <script src="app.js"></script>
+</body>
+
+</html>
